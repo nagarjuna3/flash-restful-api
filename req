@@ -1,0 +1,33 @@
+For this exercise, you will be creating a webhook payload viewer. Webhooks are a common way to trigger automation, but 
+they're sometimes poorly-documented and opaque. Your app will collect and display a webhook's payload as a first step to
+understanding its API. This exercise should take less than three hours to complete.
+
+Overview
+In the programming language of your choice, create a web application to capture and display the body of any HTTP POST request made
+to the app.
+
+Considerations
+Logistics
+Assume that other people have to run, read, and support your code, that we're going to run tests against it, and that 
+future assignments will build upon it. 
+Use any language, tools, or solutions you see fit.
+OK, let's go!
+
+Project Requirements
+The app must:
+
+Support multiple unique endpoints to enable simultaneous testing of several webhooks at once.
+Be a stateless service with a backing datastore for persistence.
+Have a functional health check.
+Execute within a Docker container.
+Extra-credit for use of Docker compose.
+
+Example Flow
+User navigates to app root (http://svc/).
+App generates unique URI endpoint and responds with a unique endpoint location (e.g., Location: http://svc/<guid>).
+User configures the webhook to POST to the generated URI, then triggers a test event.
+User issues a GET request to the URI and sees the most recent POST body.
+
+Project Delivery
+Send your working code and your README, which should also include instructions for how to run your project, including instructions 
+about any dependencies.
